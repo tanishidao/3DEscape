@@ -34,11 +34,11 @@ public class PlayerController : MonoBehaviour
         }
         if(Input.GetKey(KeyCode.S))
         {
-            PlayerTransform.transform.position += -dir2 * speed * Time.deltaTime;
+            PlayerTransform.transform.position += -dir1 * speed * Time.deltaTime;
         }
         if(Input.GetKey(KeyCode.D))
         {
-            PlayerTransform.transform.position += -dir1 * speed * Time.deltaTime;
+            PlayerTransform.transform.position += -dir2 * speed * Time.deltaTime;
         }
 
     }
