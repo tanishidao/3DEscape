@@ -9,13 +9,16 @@ public class PlayerController : MonoBehaviour
     public float speed;
     private Transform PlayerTransform;
     private Transform CameraTransform;
+
     private void Start()
     {
         PlayerTransform = transform.parent;
         CameraTransform = GetComponent<Transform>();
+        
     }
     private void Update()
     {
+        Screen.orientation = ScreenOrientation.Portrait;
         float x_Rotation = Input.GetAxis("Mouse X");
         float y_Rotation = Input.GetAxis("Mouse Y");
         PlayerTransform.transform.Rotate(0, x_Rotation, 0);
@@ -40,6 +43,7 @@ public class PlayerController : MonoBehaviour
         {
             PlayerTransform.transform.position += -dir2 * speed * Time.deltaTime;
         }
+        
 
     }
 }

@@ -33,6 +33,12 @@ public class MoveEnemy : MonoBehaviour
     private EnemyState state;
     //敵の状態
     private Transform playerTransform;
+
+    public GameObject EnemyPos;
+
+    private Vector3 destinasion;
+
+   
     //プレイヤーのtransform
     void Start()
     {
@@ -44,7 +50,7 @@ public class MoveEnemy : MonoBehaviour
         arrived = false;
         elapsedTime = 0f;
         SetState(EnemyState.Walk);
-
+        
     }
     void Update()
     {
@@ -60,9 +66,9 @@ public class MoveEnemy : MonoBehaviour
             {
                 velocity = Vector3.zero;
                 animator.SetFloat("Speed", 2.0f);
-                direction = (setPosition.GetDestination() - transform.position).normalized;
-                transform.LookAt(new Vector3(setPosition.GetDestination().x, transform.position.y, setPosition.GetDestination().z));
-                velocity = direction * walkSpeed;
+                direction = (setPosition.GetDestination() - EnemyPos.transform.position).normalized;///ベクトルを設定???
+                transform.LookAt(new Vector3(setPosition.GetDestination().x, EnemyPos.transform.position.y, setPosition.GetDestination().z));
+               velocity = direction * walkSpeed;
             }
             //目的地に到着したかどうかの判定
             if (Vector3.Distance(transform.position, setPosition.GetDestination()) < 0.5f)

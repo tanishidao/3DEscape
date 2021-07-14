@@ -8,7 +8,7 @@ public class SetPosition : MonoBehaviour
     private Vector3 destination;
     void Start()
     {
-        startPosition = transform.position;
+        startPosition = this.transform.position;
         SetDestination(transform.position);
     }
 
