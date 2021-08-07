@@ -11,7 +11,7 @@ public class ItemScript3 : MonoBehaviour
     [SerializeField] float turnSpeed = 3f; // アイテムを回転させる速さ
     [SerializeField] GameObject item; // アイテム
     [SerializeField] GameObject image; // 手のマーク
-    [SerializeField] float d = 1f; // 持ったアイテムのカメラからの距離
+    ///[SerializeField] float d = 1f; // 持ったアイテムのカメラからの距離
     [SerializeField] float armLength = 2f; // レイの長さ
     [SerializeField] Text text;
     [SerializeField] PhysicMaterial itemPM_hold; // 持った時のアイテムの物理マテリアル

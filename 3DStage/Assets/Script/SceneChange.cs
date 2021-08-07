@@ -5,19 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
-    private void Start()
-    {
-        Invoke("ChangeScene", 1.5f); 
-        
-    }
-    private void Update()
-    {
-
-    }
+   
     public void ChangeScene()
     {
+        //TimeManager.Instance.time = 0f;
         SceneManager.LoadScene("MainScene");
     }
-
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+    
     
 }
