@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Move : MonoBehaviour
+public class Move1 : MonoBehaviour
 {
     public Transform goal;//目的地オブジェクトのtransform
     private NavMeshAgent agent;

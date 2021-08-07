@@ -1,9 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 namespace UnityStandardAssets.Characters.FirstPerson
 {
+   
     [Serializable]
     public class MouseLook
     {
@@ -15,11 +18,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public bool smooth;
         public float smoothTime = 5f;
         public bool lockCursor = true;
-
+       
 
         private Quaternion m_CharacterTargetRot;
         private Quaternion m_CameraTargetRot;
-        private bool m_cursorIsLocked = true;
+        public bool m_cursorIsLocked = true;
+        
 
         public void Init(Transform character, Transform camera)
         {
@@ -72,7 +76,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 InternalLockUpdate();
         }
 
-        private void InternalLockUpdate()
+        private   void InternalLockUpdate()
         {
             if(Input.GetKeyUp(KeyCode.Escape))
             {
@@ -93,6 +97,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }
+            
         }
 
         Quaternion ClampRotationAroundXAxis(Quaternion q)
