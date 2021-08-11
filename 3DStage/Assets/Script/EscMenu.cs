@@ -9,7 +9,7 @@ public class EscMenu : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        pause.SetActive(false);
+       
         Debug.Log("è¡Ç¶ÇΩÅI");
     }
 
@@ -23,17 +23,11 @@ public class EscMenu : MonoBehaviour
             pause.SetActive(true);
             Debug.Log("kita");
             
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                QuitMenu();
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
-               
-            }
+            
         }
         else
         {
-            return;
+            pause.SetActive(false);
         }
 
         
